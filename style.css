@@ -1,0 +1,285 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+:root {
+  --primary-color: #ffffff;
+  --text-color: #151515;
+  --btn-color: #0077b6;
+  --ff: "Open Sans", sans-serif;
+  --h1: 500 40px/44px var(--ff);
+  --h2: 500 28px/32px var(--ff);
+  --h3: 500 24px/28px var(--ff);
+  --links: bold 18px/18px var(--ff);
+  --p: 18px/24px var(--ff);
+  --subtext: 12px/20px var(--ff);
+  --transiion: all 0.3s ease-in-out;
+  --shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  scroll-behavior: smooth;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+}
+.navbar {
+  height: 60px;
+  gap: 20px;
+}
+
+.navbar a {
+  position: relative;
+  text-decoration: none;
+  font-weight: lighter;
+}
+
+.navbar a p {
+  font: var(--p);
+  color: var(--text-color);
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--btn-color);
+  transition: width 0.5s ease;
+}
+
+/* Animate the underline on hover */
+.navbar a:hover::after {
+  width: 100%; /* Full width on hover (creates underline effect) */
+}
+
+.page1 {
+  position: relative;
+  min-height: 100vh;
+  background: url(https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
+    no-repeat center/cover;
+  box-shadow: var(--shadow);
+  flex-direction: column;
+}
+
+.page1::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* Shorthand for top, right, bottom, left: 0 */
+  width: 100%;
+  height: 100%;
+  background: inherit; /* Inherit the background image from .page1 */
+  filter: blur(3px);
+  z-index: 1; /* Place the pseudo-element behind the content */
+}
+
+.page1 button {
+  position: absolute;
+  bottom: 25%;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font: var(--p);
+  color: var(--primary-color);
+  background-color: var(--btn-color);
+  cursor: pointer;
+  transition: var(--transiion);
+  z-index: 2;
+}
+
+.page1 button:hover {
+  background-color: var(--primary-color);
+  color: var(--btn-color);
+  transform: scale(1.1);
+}
+
+.page1 h1 {
+  text-align: center;
+  font-size: 55px;
+  line-height: 60px;
+  font-family: var(--ff);
+  color: #ffffff;
+  width: min(90%, 30ch);
+  z-index: 2;
+}
+
+.page1 span {
+  position: absolute;
+  font-size: 2rem;
+  bottom: 12%;
+  color: white;
+  cursor: pointer;
+  z-index: 2;
+  transition: var(--transiion);
+  animation: move 1s infinite alternate;
+}
+
+@keyframes move {
+  from {
+    bottom: 12%;
+  }
+  to {
+    bottom: 15%;
+  }
+}
+
+.page2 {
+  border-top: 2px solid var(--text-color);
+  position: relative;
+  min-height: 100vh;
+}
+
+.page2 h1 {
+  text-align: center;
+  padding: 30px 0;
+  font: var(--h1);
+}
+
+.page2 p {
+  text-align: center;
+  padding: 30px 0;
+  font: var(--p);
+}
+
+.page2-wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.page2 .box {
+  width: 300px;
+  height: 250px;
+  overflow: hidden;
+  border: 2px solid var(--btn-color);
+  border-radius: 10px;
+  margin: 15px;
+}
+
+.page2 .box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: var(--transiion);
+}
+
+.box:hover img {
+  transform: scale(1.1);
+}
+
+.page3 {
+  min-height: 100vh;
+  border-top: 2px solid var(--text-color);
+  text-align: center;
+}
+
+.page3 h1 {
+  font: var(--h1);
+  padding: 20px 0px;
+}
+.page3 img {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  transition: var(--transiion);
+}
+.page3 img:hover {
+  transform: scale(1.1);
+}
+
+.page3 article {
+  width: min(85%, 58ch);
+  margin: auto;
+  padding: 20px 10px;
+  /* max-width: 55ch; */
+  font: var(--p);
+  text-align: justify;
+  letter-spacing: 0.1px;
+}
+
+.page3 .social-links {
+  margin: 20px 0;
+}
+.page3 span {
+  font-size: 1.3rem;
+  padding: 10px;
+}
+
+.page4 {
+  border-top: 2px solid var(--text-color);
+  min-height: 85vh;
+}
+
+.page4 h1 {
+  text-align: center;
+  font: var(--h1);
+  padding: 30px 0;
+}
+
+.page4 form {
+  width: min(90%, 500px);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+form label {
+  font: var(--p);
+  padding-left: 5px;
+}
+
+form input {
+  font: var(--p);
+  padding: 15px;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  box-shadow: var(--shadow);
+}
+form input::placeholder {
+  font-size: 1rem;
+}
+
+form input[type="checkbox"] {
+  cursor: pointer;
+  width: 20px;
+  height: 15px;
+}
+
+form textarea {
+  resize: none;
+  height: 150px;
+  padding: 10px;
+  font: var(--p);
+  outline: none;
+  border: none;
+  box-shadow: var(--shadow);
+}
+
+footer {
+  width: 100%;
+  height: 50px;
+  font: var(--p);
+}

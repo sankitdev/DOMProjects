@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My JS Projects</title>
+    <link rel="shortcut icon" href="js.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <nav class="section navbar">
+        <a href="#home"><p>Home</p></a>
+        <a href="#project"><p>JS Project</p></a>
+        <a href="#about"><p>About</p></a>
+        <a href="#contact"><p>Contact</p></a>
+      </nav>
+
+      <section class="section page1" id="home">
+        <h1>
+          Learning is not about knowing concepts but able to implement it into
+          real ideas.
+        </h1>
+        <button class="link">Explore</button>
+        <span class="link"><i class="ri-arrow-down-wide-fill"></i></span>
+      </section>
+      <section class="page2" id="project">
+        <h1>My JavaScript Projects</h1>
+        <div class="page2-wrap">
+          <div class="box">
+            <a href="/Calculator/"><img src="/Calculator/Calc.png" alt="" /></a>
+          </div>
+          <div class="box">
+            <a href="/Image Slider/"
+              ><img src="/Image Slider/image carousel.jpg" alt=""
+            /></a>
+          </div>
+          <div class="box">
+            <a href="/To Do List/"><img src="/To Do List/todo.png" alt="" /></a>
+          </div>
+          <div class="box">
+            <a href="/WordCounterApp/"
+              ><img src="/WordCounterApp/WordCounter.png" alt=""
+            /></a>
+          </div>
+          <div class="box">
+            <a href="/Digital Clock/"
+              ><img src="/Digital Clock/Digital clock.png" alt=""
+            /></a>
+          </div>
+        </div>
+        <p>More projects are on the way....</p>
+      </section>
+      <section class="page3" id="about">
+        <h1>About</h1>
+        <img src="About.jpg" alt="" />
+        <article>
+          Hello, I am a passionate newbie web developer now working on
+          <u>front-end</u>. For now my goal is to learn
+          <strong>Full-Stack Developement</strong>. It better to move step by
+          step rather than not moving at all. I have learnt HTML5, CSS3, JS,
+          Tailwind. There are other technologies and frameworks which I need to
+          ace to get into tech job like React js, Next Js, Vue Js, Redux. Apart
+          from these BackEnd is waiting for me to undiscover those tech MongoDB
+          (DataBase), Express JS (Framework for Backend). After I ace these all
+          together I will Finally be MERN Stack Developer. And I will continue
+          to move forward. To join me in my journey you can connect me through
+          below links.
+        </article>
+        <div class="social-links">
+          <span><i class="ri-instagram-fill"></i></span>
+          <span><i class="ri-twitter-x-fill"></i></span>
+          <span><i class="ri-linkedin-fill"></i></span>
+          <span><i class="ri-github-fill"></i></span>
+        </div>
+      </section>
+      <section class="page4" id="contact">
+        <h1>Contact</h1>
+        <div class="section form-container">
+          <form action="#">
+            <label for="name">Name:</label>
+            <input type="text" placeholder="Enter your Name" required />
+            <label for="email">Email:</label>
+            <input type="email" placeholder="Enter your Email" required />
+            <label for="reason">Reason to Connect:</label>
+            <textarea id="textarea"></textarea>
+            <label>
+              <input type="checkbox" name="checkbox" id="checkbox" required />
+              <span>
+                I agree to the terms and conditions and the processing of my
+                data to contact me.</span
+              >
+            </label>
+          </form>
+        </div>
+      </section>
+      <footer class="section">
+        <p>Created by sankitdev ©2024</p>
+      </footer>
+    </div>
+    <script>
+      const addingLocation = document.querySelectorAll(".link");
+      addingLocation.forEach((e) => {
+        e.addEventListener("click", function (event) {
+          event.preventDefault();
+          window.location.href = "#project";
+        });
+      });
+    </script>
+  </body>
+</html>
