@@ -113,11 +113,11 @@ body {
 
 .page1 h1 {
   text-align: center;
-  font-size: 55px;
-  line-height: 60px;
+  font-size: min(44px, 55px);
+  line-height: min(50px, 60px);
   font-family: var(--ff);
   color: #ffffff;
-  width: min(90%, 30ch);
+  width: min(95%, 30ch);
   z-index: 2;
 }
 
