@@ -9,7 +9,7 @@
   --h2: 500 28px/32px var(--ff);
   --h3: 500 24px/28px var(--ff);
   --links: bold 18px/18px var(--ff);
-  --p: 18px/24px var(--ff);
+  --p: 20px/24px var(--ff);
   --subtext: 12px/20px var(--ff);
   --transiion: all 0.3s ease-in-out;
   --shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
